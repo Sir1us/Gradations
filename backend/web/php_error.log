@@ -1,0 +1,76 @@
+[13-Apr-2016 13:12:48 UTC] PHP Fatal error:  Call to a member function getCount() on a non-object in /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/widgets/BaseListView.php on line 178
+[13-Apr-2016 13:12:48 UTC] PHP Stack trace:
+[13-Apr-2016 13:12:48 UTC] PHP   1. {main}() /home/sir1us/webserver/app.local/backend/web/index.php:0
+[13-Apr-2016 13:12:48 UTC] PHP   2. yii\base\Application->run() /home/sir1us/webserver/app.local/backend/web/index.php:18
+[13-Apr-2016 13:12:48 UTC] PHP   3. yii\web\Application->handleRequest() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Application.php:375
+[13-Apr-2016 13:12:48 UTC] PHP   4. yii\base\Module->runAction() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/web/Application.php:84
+[13-Apr-2016 13:12:48 UTC] PHP   5. yii\base\Controller->runAction() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Module.php:454
+[13-Apr-2016 13:12:48 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Controller.php:154
+[13-Apr-2016 13:12:48 UTC] PHP   7. call_user_func_array() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/InlineAction.php:55
+[13-Apr-2016 13:12:48 UTC] PHP   8. backend\controllers\GradationsController->actionIndex() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/InlineAction.php:55
+[13-Apr-2016 13:12:48 UTC] PHP   9. yii\base\Controller->render() /home/sir1us/webserver/app.local/backend/controllers/GradationsController.php:44
+[13-Apr-2016 13:12:48 UTC] PHP  10. yii\base\View->render() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Controller.php:377
+[13-Apr-2016 13:12:48 UTC] PHP  11. yii\base\View->renderFile() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/View.php:149
+[13-Apr-2016 13:12:48 UTC] PHP  12. yii\base\View->renderPhpFile() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/View.php:247
+[13-Apr-2016 13:12:48 UTC] PHP  13. require() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/View.php:325
+[13-Apr-2016 13:12:48 UTC] PHP  14. yii\base\Widget::widget() /home/sir1us/webserver/app.local/backend/views/gradations/index.php:43
+[13-Apr-2016 13:12:48 UTC] PHP  15. yii\grid\GridView->run() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Widget.php:98
+[13-Apr-2016 13:12:48 UTC] PHP  16. yii\widgets\BaseListView->run() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/grid/GridView.php:288
+[13-Apr-2016 13:12:48 UTC] PHP  17. preg_replace_callback() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/widgets/BaseListView.php:129
+[13-Apr-2016 13:12:48 UTC] PHP  18. yii\widgets\BaseListView->yii\widgets\{closure}() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/widgets/BaseListView.php:129
+[13-Apr-2016 13:12:48 UTC] PHP  19. yii\grid\GridView->renderSection() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/widgets/BaseListView.php:126
+[13-Apr-2016 13:12:48 UTC] PHP  20. yii\widgets\BaseListView->renderSection() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/grid/GridView.php:313
+[13-Apr-2016 13:12:48 UTC] PHP  21. yii\widgets\BaseListView->renderSummary() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/widgets/BaseListView.php:149
+[13-Apr-2016 13:40:17 UTC] PHP Parse error:  syntax error, unexpected ']' in /home/sir1us/webserver/app.local/backend/controllers/GradationsController.php on line 54
+[13-Apr-2016 13:40:17 UTC] PHP Stack trace:
+[13-Apr-2016 13:40:17 UTC] PHP   1. {main}() /home/sir1us/webserver/app.local/backend/web/index.php:0
+[13-Apr-2016 13:40:17 UTC] PHP   2. yii\base\Application->run() /home/sir1us/webserver/app.local/backend/web/index.php:18
+[13-Apr-2016 13:40:17 UTC] PHP   3. yii\web\Application->handleRequest() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Application.php:375
+[13-Apr-2016 13:40:17 UTC] PHP   4. yii\base\Module->runAction() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/web/Application.php:84
+[13-Apr-2016 13:40:17 UTC] PHP   5. yii\base\Module->createController() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Module.php:448
+[13-Apr-2016 13:40:17 UTC] PHP   6. yii\base\Module->createControllerByID() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Module.php:520
+[13-Apr-2016 13:40:17 UTC] PHP   7. class_exists() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Module.php:562
+[13-Apr-2016 13:40:17 UTC] PHP   8. spl_autoload_call() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Module.php:562
+[13-Apr-2016 13:40:17 UTC] PHP   9. yii\BaseYii::autoload() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Module.php:0
+[13-Apr-2016 14:09:50 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/sir1us/webserver/app.local/backend/views/gradations/index.php on line 48
+[13-Apr-2016 14:09:50 UTC] PHP Stack trace:
+[13-Apr-2016 14:09:50 UTC] PHP   1. {main}() /home/sir1us/webserver/app.local/backend/web/index.php:0
+[13-Apr-2016 14:09:50 UTC] PHP   2. yii\base\Application->run() /home/sir1us/webserver/app.local/backend/web/index.php:18
+[13-Apr-2016 14:09:50 UTC] PHP   3. yii\web\Application->handleRequest() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Application.php:375
+[13-Apr-2016 14:09:50 UTC] PHP   4. yii\base\Module->runAction() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/web/Application.php:84
+[13-Apr-2016 14:09:50 UTC] PHP   5. yii\base\Controller->runAction() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Module.php:454
+[13-Apr-2016 14:09:50 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Controller.php:154
+[13-Apr-2016 14:09:50 UTC] PHP   7. call_user_func_array() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/InlineAction.php:55
+[13-Apr-2016 14:09:50 UTC] PHP   8. backend\controllers\GradationsController->actionIndex() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/InlineAction.php:55
+[13-Apr-2016 14:09:50 UTC] PHP   9. yii\base\Controller->render() /home/sir1us/webserver/app.local/backend/controllers/GradationsController.php:44
+[13-Apr-2016 14:09:50 UTC] PHP  10. yii\base\View->render() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Controller.php:377
+[13-Apr-2016 14:09:50 UTC] PHP  11. yii\base\View->renderFile() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/View.php:149
+[13-Apr-2016 14:09:50 UTC] PHP  12. yii\base\View->renderPhpFile() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/View.php:247
+[13-Apr-2016 18:29:29 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ']' in /home/sir1us/webserver/app.local/backend/views/gradations/index.php on line 54
+[13-Apr-2016 18:29:29 UTC] PHP Stack trace:
+[13-Apr-2016 18:29:29 UTC] PHP   1. {main}() /home/sir1us/webserver/app.local/backend/web/index.php:0
+[13-Apr-2016 18:29:29 UTC] PHP   2. yii\base\Application->run() /home/sir1us/webserver/app.local/backend/web/index.php:18
+[13-Apr-2016 18:29:29 UTC] PHP   3. yii\web\Application->handleRequest() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Application.php:375
+[13-Apr-2016 18:29:29 UTC] PHP   4. yii\base\Module->runAction() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/web/Application.php:84
+[13-Apr-2016 18:29:29 UTC] PHP   5. yii\base\Controller->runAction() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Module.php:454
+[13-Apr-2016 18:29:29 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Controller.php:154
+[13-Apr-2016 18:29:29 UTC] PHP   7. call_user_func_array() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/InlineAction.php:55
+[13-Apr-2016 18:29:29 UTC] PHP   8. backend\controllers\GradationsController->actionIndex() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/InlineAction.php:55
+[13-Apr-2016 18:29:29 UTC] PHP   9. yii\base\Controller->render() /home/sir1us/webserver/app.local/backend/controllers/GradationsController.php:44
+[13-Apr-2016 18:29:29 UTC] PHP  10. yii\base\View->render() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Controller.php:377
+[13-Apr-2016 18:29:29 UTC] PHP  11. yii\base\View->renderFile() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/View.php:149
+[13-Apr-2016 18:29:29 UTC] PHP  12. yii\base\View->renderPhpFile() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/View.php:247
+[13-Apr-2016 18:45:48 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/sir1us/webserver/app.local/backend/views/gradations/index.php on line 48
+[13-Apr-2016 18:45:48 UTC] PHP Stack trace:
+[13-Apr-2016 18:45:48 UTC] PHP   1. {main}() /home/sir1us/webserver/app.local/backend/web/index.php:0
+[13-Apr-2016 18:45:48 UTC] PHP   2. yii\base\Application->run() /home/sir1us/webserver/app.local/backend/web/index.php:18
+[13-Apr-2016 18:45:48 UTC] PHP   3. yii\web\Application->handleRequest() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Application.php:375
+[13-Apr-2016 18:45:48 UTC] PHP   4. yii\base\Module->runAction() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/web/Application.php:84
+[13-Apr-2016 18:45:48 UTC] PHP   5. yii\base\Controller->runAction() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Module.php:454
+[13-Apr-2016 18:45:48 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Controller.php:154
+[13-Apr-2016 18:45:48 UTC] PHP   7. call_user_func_array() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/InlineAction.php:55
+[13-Apr-2016 18:45:48 UTC] PHP   8. backend\controllers\GradationsController->actionIndex() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/InlineAction.php:55
+[13-Apr-2016 18:45:48 UTC] PHP   9. yii\base\Controller->render() /home/sir1us/webserver/app.local/backend/controllers/GradationsController.php:44
+[13-Apr-2016 18:45:48 UTC] PHP  10. yii\base\View->render() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/Controller.php:377
+[13-Apr-2016 18:45:48 UTC] PHP  11. yii\base\View->renderFile() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/View.php:149
+[13-Apr-2016 18:45:48 UTC] PHP  12. yii\base\View->renderPhpFile() /home/sir1us/webserver/app.local/vendor/yiisoft/yii2/base/View.php:247

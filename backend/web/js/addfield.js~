@@ -1,0 +1,44 @@
+$('.multi-field-wrapper').each(function() {
+    var $wrapper = $('.multi-fields', this);
+    $(".add-field", $(this)).click(function(e) {
+	    // get total rows for new id in form
+        var newfieldscount = $('.multi-field').length;
+
+        // find and copy new fild
+        $('.multi-field:first-child', $wrapper).clone(true).appendTo($wrapper).find('input').val('').focus();
+
+        // change name of new row with input fields
+        $('.multi-field:last-child', $wrapper).find('input').each(function(){
+            var $newname = $(this).attr('name').replace(/\[[0-9]+\]/g, '['+newfieldscount+']');
+            $(this).attr('name', $newname);
+        });
+
+    });
+    $('.multi-field .remove-field', $wrapper).click(function() {
+        if ($('.multi-field').length > 1)
+            $(this).parent('.multi-field').remove();
+    });
+});
+
+
+$('.multi-field-wrappers').each(function() {
+    var $wrappers = $('.multi-field2', this);
+    $(".add-fields", $(this)).click(function(e) {
+	    // get total rows for new id in form
+        var newfieldscounts = $('.multi-fieldsinput').length;
+
+        // find and copy new fild
+        $('.multi-fieldsinput:first-child', $wrappers).clone(true).appendTo($wrappers).find('input').val('').focus();
+
+        // change name of new row with input fields
+        $('.multi-fieldsinput:last-child', $wrappers).find('input').each(function(){
+            var $newnames = $(this).attr('name').replace(/\[[0-9]+\]/g, '['+newfieldscounts+']');
+            $(this).attr('name', $newnames);
+        });
+
+    });
+    $('.multi-fieldsinput.remove-fields', $wrappers).click(function() {
+        if ($('.multi-fieldsinput').length > 1)
+            $(this).parent('.multi-fieldsinput').remove();
+    });
+});
