@@ -57,6 +57,13 @@ $this->params['breadcrumbs'][] = $this->title;
          //функция котороя к массиву ids добавила массив gradations
          array_push($attrib, $arrayAtt);
      }
+    for ($if = 0; $if <= count($text_info['sumGradations']) - 1; $if++) {
+        $attSum = [
+            'label' => "Sum gradations {$if}",
+            'value' => 'from: ' . $text_info['sumGradations'][$if]['from'] . '; to: ' . $text_info['sumGradations'][$if]['to'] . '; value: ' . $text_info['sumGradations'][$if]['value'] . '; type: ' . $text_info['sumGradations'][$if]['type']
+        ];
+        array_push($attrib, $attSum);
+    }
     //функция которая к уже соединенным массивам ids и gradations добавила массив с id перед ними.
     array_unshift($attrib, $idView);
     ?>

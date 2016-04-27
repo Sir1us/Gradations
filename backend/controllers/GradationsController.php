@@ -64,6 +64,7 @@ class GradationsController extends Controller
     public function actionCreate()
     {
         // указываем условия что будет происходить если в post что то есть
+
         $model = new Gradations();
         if(Yii::$app->request->post()) {
             $post = Yii::$app->request->post();
@@ -75,9 +76,13 @@ class GradationsController extends Controller
 
             $nkeys = array_keys($post['gradations']);
             foreach ($post['ids'] as $nkeys => $val) {
-                $ids = $post['ids'][$nkeys];
-                array_push($onerecord->ids, $ids);
-            }   
+                if (empty($post['ids'][$nkeys])) {
+                    continue;
+                } else {
+                    $ids = $post['ids'][$nkeys];
+                    array_push($onerecord->ids, $ids);
+                }
+            }
 
             //преобразование данных в json код и перебераем их
 
@@ -88,11 +93,21 @@ class GradationsController extends Controller
                 $gr1->from = $post['gradations'][$newkeys]['from'];
                 $gr1->to = $post['gradations'][$newkeys]['to'];
                 $onerecord->gradations[] = $gr1;
-                $jsonText = json_encode($onerecord);
+
+            }
+            $sumkeys = array_keys($post['sumGradations']);
+            foreach ($post['sumGradations'] as $sumkeys => $sumValue) {
+                $grSum = new \stdClass();
+                $grSum->from = $post['sumGradations'][$sumkeys]['from'];
+                $grSum->to = $post['sumGradations'][$sumkeys]['to'];
+                $grSum->value = $post['sumGradations'][$sumkeys]['value'];
+                $grSum->type = $post['sumGradations'][$sumkeys]['type'];
+                $onerecord->sumGradations[] = $grSum;
+                $allJson = json_encode($onerecord);
             }
                 $finalData = ['Gradations' => [
                     'id' => $post['id'],
-                    'text_info' => $jsonText,
+                    'text_info' => $allJson,
                     ]
                 ];
                 //загрузка конечного вида данных и сохранение их
@@ -136,8 +151,12 @@ class GradationsController extends Controller
 
             $nkeys = array_keys($posts['gradations']);
             foreach ($posts['ids'] as $nkeys => $val) {
-                $ids = $posts['ids'][$nkeys];
-                array_push($onerecords->ids, $ids);
+                if (empty($posts['ids'][$nkeys])) {
+                    continue;
+                } else {
+                    $ids = $posts['ids'][$nkeys];
+                    array_push($onerecords->ids, $ids);
+                }
 
             }
             $newkeys = array_keys($posts['gradations']);
@@ -147,12 +166,20 @@ class GradationsController extends Controller
                 $gr2->from = $posts['gradations'][$newkeys]['from'];
                 $gr2->to = $posts['gradations'][$newkeys]['to'];
                 $onerecords->gradations[] = $gr2;
-                $jsonText = json_encode($onerecords);
+            }
+            $sumkeys = array_keys($posts['sumGradations']);
+            foreach ($posts['sumGradations'] as $sumkeys => $sumValue) {
+                $grSum2 = new \stdClass();
+                $grSum2->from = $posts['sumGradations'][$sumkeys]['from'];
+                $grSum2->to = $posts['sumGradations'][$sumkeys]['to'];
+                $grSum2->value = $posts['sumGradations'][$sumkeys]['value'];
+                $grSum2->type = $posts['sumGradations'][$sumkeys]['type'];
+                $onerecords->sumGradations[] = $grSum2;
+                $allJson = json_encode($onerecords);
             }
 
             $finalData = ['Gradations' => [
-                'id' => $posts['id'],
-                'text_info' => $jsonText,
+                'text_info' => $allJson,
                 ]
             ];
 
@@ -160,7 +187,7 @@ class GradationsController extends Controller
                     return $this->render('view', [
                         'model' => $model,
                         'id' => $model->id,
-                        'text_info' => json_decode($jsonText, true),
+                        'text_info' => json_decode($allJson, true),
                     ]);
             }
         } else {

@@ -39,10 +39,16 @@ $this->params['breadcrumbs'][] = $this->title;
               'label'=> 'Gradations',
                'value' => function($grad_item){
                 $json_grad = $grad_item['text_info'];
-
                    $array_grad = json_decode($json_grad, true);
-
                    return count($array_grad['gradations']);
+                }
+            ],
+            [
+                'label'=> 'Sum Gradations',
+                'value' => function($sumGrad_item){
+                    $sumJson_grad = $sumGrad_item['text_info'];
+                    $sumArray_grad = json_decode($sumJson_grad, true);
+                    return @count($sumArray_grad['sumGradations']);
                 }
             ],
 

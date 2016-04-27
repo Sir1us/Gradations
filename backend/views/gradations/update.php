@@ -18,6 +18,7 @@ $this->params['breadcrumbs'][] = 'Update';
         'model' => $model,
         'ids' => $b['ids'],
         'gradations' => $b['gradations'],
+        'sumGradations' => $b['sumGradations'],
     ]) ?>
 
 </div>
